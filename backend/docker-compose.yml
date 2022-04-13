@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:13
+    container_name: register
+    environment:
+      POSTGRES_PASSWORD: 'secret'
+      POSTGRES_DB: register
+    ports:
+      - '5432:5432'

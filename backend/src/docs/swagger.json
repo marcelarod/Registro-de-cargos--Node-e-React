@@ -1,0 +1,467 @@
+{
+    "swagger": "2.0.0",
+    "info": {
+        "version": "beta",
+        "title": "Cadastros de Cargos",
+        "contact": {
+            "email": "andradem45678@gmail.com"
+        }
+    },
+    "host": "localhost:4000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Cargos",
+            "description": "Referente ao cadastro de Cargos em geral."
+        },
+        {
+            "name": "Funcionário",
+            "description": "Referente ao cadastro de Funcionário em geral."
+        },
+        {
+            "name": "Cargos dos Funcionário",
+            "description": "Referente ao cadastro de Cargos dos Funcionário em geral."
+        }
+    ],
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "consumes": [],
+    "produces": [],
+    "paths": {
+        "/positions": {
+            "post": {
+                "tags": [
+                    "Cargos"
+                ],
+                "description": "Recebe um JSON para cadastro de cargos.",
+                "parameters": [
+                    {
+                        "name": "obj",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/components/schemas/Positions"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Cargos"
+                ],
+                "description": "Retornar um array com todos os cargos cadastrados.",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/positions/{id}": {
+            "get": {
+                "tags": [
+                    "Cargos"
+                ],
+                "description": "Busca um cargos em específico.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {}
+            },
+            "put": {
+                "tags": [
+                    "Cargos"
+                ],
+                "description": "Recebe um JSON para atualizar um cargos em específico.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number"
+                    },
+                    {
+                        "name": "obj",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/components/schemas/Positions"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },  
+            "delete": {
+                "tags": [
+                    "Cargos"
+                ],
+                "description": "Deleta um cargos.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/employees": {
+            "post": {
+                "tags": [
+                    "Funcionário"
+                ],
+                "description": "Recebe um JSON para cadastrar um funcionário.",
+                "parameters": [
+                    {
+                        "name": "obj",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/components/schemas/Employees"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Funcionário"
+                ],
+                "description": "Retornar um array com todos os funcionário cadastrados.",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/employees/{id}": {
+            "get": {
+                "tags": [
+                    "Funcionário"
+                ],
+                "description": "Busca um funcionário em específico.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {}
+            },
+            "put": {
+                "tags": [
+                    "Funcionário"
+                ],
+                "description": "Recebe um JSON para atualizar um funcionário em específico.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number"
+                    },
+                    {
+                        "name": "obj",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/components/schemas/Employees"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },  
+            "delete": {
+                "tags": [
+                    "Funcionário"
+                ],
+                "description": "Deleta um funcionário.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/employees/isActive/{id}": {
+            "put": {
+                "tags": [
+                    "Funcionário"
+                ],
+                "description": "Atualizar um status do funcionário em específico.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number"
+                    },
+                    {
+                        "name": "obj",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/components/schemas/isActive"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/companyPositions": {
+            "post": {
+                "tags": [
+                    "Cargos dos Funcionário"
+                ],
+                "description": "Recebe um JSON para cadastrar o cargo funcionário.",
+                "parameters": [
+                    {
+                        "name": "obj",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/components/schemas/CompanyPositions"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Cargos dos Funcionário"
+                ],
+                "description": "Retornar um array com todos os cargo funcionário cadastrados.",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/companyPositions/{id}": {
+            "get": {
+                "tags": [
+                    "Cargos dos Funcionário"
+                ],
+                "description": "Busca um cargo do funcionário em específico.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number"
+                    }
+                ],
+                "responses": {}
+            },
+            "put": {
+                "tags": [
+                    "Cargos dos Funcionário"
+                ],
+                "description": "Recebe um JSON para atualizar um cargo funcionário em específico.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "number"
+                    },
+                    {
+                        "name": "obj",
+                        "in": "body",
+                        "schema": {
+                            "$ref": "#/components/schemas/CompanyPositions"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            },  
+            "delete": {
+                "tags": [
+                    "Cargos dos Funcionário"
+                ],
+                "description": "Deleta um cargo funcionário.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        }
+        
+    },
+    "components": {
+        "schemas": {
+            "Positions": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Cargo 1"
+                    }
+                }
+            },
+            "isActive": {
+                "type": "object",
+                "properties": {
+                    "isActive": {
+                        "type": "string",
+                        "example": "true"
+                    }
+                }
+            },
+            "Employees": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Nome Exemplo"
+                    },
+                    "birth": {
+                        "type": "string",
+                        "example": "2022-01-01"
+                    },
+                    "address": {
+                        "type": "string",
+                        "example": "Rua Exemplo"
+                    }, 
+                    "email": {
+                        "type": "string",
+                        "example": "Exemplo@exemplo.com"
+                    }
+                }
+            },
+            "CompanyPositions": {
+                "type": "object",
+                "properties": {
+                    "employeeId": {
+                        "type": "number",
+                        "example": 1
+                    },
+                    "positionId": {
+                        "type": "number",
+                        "example": 1
+                    }
+                }
+            }
+        }
+    }
+}
