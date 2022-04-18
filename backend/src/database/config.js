@@ -8,17 +8,5 @@ const config = {
     database: process.env.DB_NAME,
     dialect: "postgres"
 }
-// AWS RDS requer que as conexões sejam feitas com o SSL ativo,
-// o que não é comum no ambiente de desenvolvimento
-
-if (process.env.NODE_ENV == 'production') {
-    config["dialectOptions"] = {
-        ssl: {
-            require: true,
-            rejectUnauthorized: false
-        }
-    }
-   // config["logging"] = false
-}
 
 module.exports = config
