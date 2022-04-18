@@ -1,0 +1,46 @@
+
+.main{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 3%;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    height: 100%;
+    min-height: 370px;
+}
+
+.containerButtons{
+    display: flex;
+    margin-top: 4%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.containerButtons button{
+    display: flex;
+    width: 28%;
+    height: 40px;
+    background: #12267C;
+    color: #fff;
+    border: none;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.containerButtons svg{
+    margin-right: 4%;
+}
+
+.employeeTable{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 3%;
+}

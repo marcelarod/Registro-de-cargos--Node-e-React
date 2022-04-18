@@ -28,6 +28,14 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      positionId: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Positions',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

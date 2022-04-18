@@ -1,0 +1,43 @@
+
+.main{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 3%;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    height: 100%;
+    min-height: 370px;
+}
+
+.positions{
+    display: flex;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 9%;
+}
+.positions svg {
+    margin-left: 2%;
+    box-shadow: 0px 0px 6px 0px #ccc;
+    border-radius: 5px;
+}
+
+.positions input{
+    box-shadow: 0px 0px 6px 0px #ccc;
+    border-radius: 5px;
+    border: none;
+    margin-left: 1%;
+    height: 24px;
+}
+
+.positionsTable{
+    margin-left: 9%;
+    margin-right: 2%;
+    margin-top: 3%;
+}

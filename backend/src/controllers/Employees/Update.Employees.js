@@ -4,7 +4,7 @@ const { validationResult } = require('express-validator');
 const UpdateEmployees = async (req, res) => {
     try {
         // Descontroi body e atualiza tabela
-        let { name, birth, address, email } = req.body;
+        let { name, birth, address, email, positionId } = req.body;
 
         // Verifica se houve algum erro de validação
         let error = validationResult(req);
@@ -21,7 +21,7 @@ const UpdateEmployees = async (req, res) => {
             return res.status(400).json({ errors: [{ value: req.params.id, msg: 'Email já cadastrado.', param: 'id', location: 'body' }] })
         }
 
-        await Employees.update({name, birth, address, email , isActive:true}, { where: { id: req.params.id } });
+        await Employees.update({name, birth, address, email , positionId, isActive:true}, { where: { id: req.params.id } });
 
         // Busca item atualizado para envio
         const dbEmployees = await Employees.findOne({ where: { id: req.params.id }, attributes: { exclude: ['createdAt', 'updatedAt'] } });

@@ -31,5 +31,7 @@ app.route('/employees/:id')
 app.route('/employees/isActive/:id')
     .put(EmployeesUpdate.statusEmployees)// desabilita ou habilita o funcionario
 
+app.route('/employees/positions/:id')
+    .put(EmployeesSelect.getEmployeesByPositions)// desabilita ou habilita o funcionario
 
 module.exports = app;

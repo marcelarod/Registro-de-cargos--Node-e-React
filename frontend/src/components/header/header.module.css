@@ -1,0 +1,8 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../../assets/header.png');
+    background-size: cover;
+    height: 7vh;
+    padding: 0.25rem;
+}

@@ -1,0 +1,30 @@
+
+.containerHome{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+}
+
+.containerButtons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+}
+
+.containerButtons button{
+    display: flex;
+    width: 24%;
+    height: 6%;
+    background: #12267C;
+    color: #fff;
+    border: none;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.containerButtons svg{
+    margin-right: 4%;
+}

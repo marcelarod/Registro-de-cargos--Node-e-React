@@ -3,7 +3,7 @@ const { validationResult } = require('express-validator');
 
 module.exports = async (req, res) => {
     try {
-        let { name, birth, address, email } = req.body;
+        let { name, birth, address, email, positionId } = req.body;
 
         // Verifico se existe algum erro no corpo da requisição
         let error = validationResult(req);
@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
         }
 
         // Executa a criação da relação
-        const resultCreation = await Employees.create({ name, birth, address, email,isActive:true});
+        const resultCreation = await Employees.create({ name, birth, address, email,isActive:true, positionId});
 
         return res.status(200).json(resultCreation);
     }

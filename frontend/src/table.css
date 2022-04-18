@@ -1,0 +1,60 @@
+.rc-table tbody tr,.MuiTable-root tbody tr, .rc-table-footer {
+    box-shadow: 0px 0px 6px 0px #ccc;
+    border-radius: 5px;
+    font-weight: 400;
+    color: black;
+}
+
+.rc-table tbody tr td, .MuiTable-root tbody tr td{
+    padding: 0.5rem;
+}
+
+table {
+    border-spacing: 0 0.5rem !important;
+    border-collapse: separate !important;
+}
+
+
+.rc-table thead tr, .MuiTable-root thead tr{
+    background: #ccc;
+    color: black;
+    border-radius: 5px;
+}
+
+.rc-table .rc-table-thead {
+    border-radius: 5px;
+    font-weight: 200;
+}
+
+.rc-table thead tr th, .MuiTable-root thead tr th{
+    padding: 0.5rem;
+    font-weight: 400;
+}
+
+    
+
+.rc-table-header, .MuiTableHead-root{
+    margin-bottom: -1rem;
+}
+
+.MuiTable-root input{
+    box-shadow: none !important;
+}
+
+.MuiTable-root{
+    border-spacing: 0 0.5rem !important;
+    border-collapse: separate !important;
+    padding: 0.1rem !important;
+}
+
+.MuiPaper-elevation2 {
+    box-shadow: none !important;
+}
+
+.containerTableHover tbody tr{
+    cursor: pointer;
+}
+
+.containerTableHover tbody tr:hover{    
+    box-shadow: 0px 0px 6px 0px #ccc;
+}

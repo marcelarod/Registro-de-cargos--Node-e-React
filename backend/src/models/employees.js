@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Employees extends Model {
     static associate(models) {
       // define association here
+      Employees.belongsTo(models.Positions, { foreignKey: "positionId",as: 'Positions'  })
 
     }
   };
@@ -14,6 +15,7 @@ module.exports = (sequelize, DataTypes) => {
      birth: DataTypes.DATEONLY,
      address: DataTypes.STRING,
      email: DataTypes.STRING,
+     positionId: DataTypes.INTEGER,
      isActive: DataTypes.BOOLEAN,
   }, {
     sequelize,
